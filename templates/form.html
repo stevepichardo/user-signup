@@ -3,30 +3,37 @@
 {% block content %}
 <h1>User Signup</h1>
 
-<form>
+<form methods=['POST']>
     <p>
         <label for="username">
         Username
          <input id="username" type="text" name="username" />
         </label>
     </p>
+
     <p>
         <label for="password">
             password
             <input id="password" type="password" name="password" />
         </label>
     </p>
+
     <p>
         <label for="verifypassword">
             Verify Password
             <input id="verifypassword" type="password" name="verifypassword" />
         </label>
     </p>
+
     <p>
         <label for="email">
             Email (optional)
             <input id="email" type"text" name="email">
         </label>
+    </p>
+
+    <p>
+        <button type="submit" value="signup">Sign Up</button>
     </p>
 </form>
 

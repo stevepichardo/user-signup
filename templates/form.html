@@ -7,7 +7,8 @@
     <p>
         <label for="username">
         Username
-         <input id="username" type="text" name="username" />
+         <input id="username" type="text" name="username" value="{{ username }}" />
+         <span class="error">{{ error_dict['username'] }}</span>
         </label>
     </p>
 
@@ -15,6 +16,7 @@
         <label for="password">
             password
             <input id="password" type="password" name="password" />
+            <span class="error">{{ error_dict['password'] }}</span>
         </label>
     </p>
 
@@ -22,13 +24,15 @@
         <label for="verifypassword">
             Verify Password
             <input id="verifypassword" type="password" name="verifypassword" />
+            <span class="error">{{ error_dict['verifypassword'] }}</span>
         </label>
     </p>
 
     <p>
         <label for="email">
             Email (optional)
-            <input id="email" type"text" name="email">
+            <input id="email" type"text" name="email" value="{{ email }}" />
+            <span class="error">{{ error_dict['email'] }}</span>
         </label>
     </p>
 

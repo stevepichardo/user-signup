@@ -22,9 +22,10 @@ def signup():
 
         if password != verifypassword:
             error_dict['verifypassword'] = "Passwords do not match"
-
-        if "@" not in email or "." not in email:
-           error_dict['email'] = "invalid email"
+        
+        if email:
+            if "@" not in email or "." not in email:
+                error_dict['email'] = "invalid email"
         
         if not error_dict:
             return redirect("/welcome?username={0}".format(username))

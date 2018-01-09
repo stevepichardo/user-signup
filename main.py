@@ -18,7 +18,7 @@ def signup():
             error_dict['username'] = "Not a valid username"
         
         if len(password) < 3 or len(password) > 20 or " " in password:
-            error_dict['password'] = "not a valid password"
+            error_dict['password'] = "Not a valid password"
 
         if password != verifypassword:
             error_dict['verifypassword'] = "Passwords do not match"
